@@ -6,7 +6,7 @@ import pymongo
 fake = Faker()
 
 # Connect to MongoDB Atlas
-client = pymongo.MongoClient("mongodb+srv://jay:Password123@insurance.qzgzhb2.mongodb.net/?retryWrites=true&w=majority&appName=insurance")
+client = pymongo.MongoClient("mongodb+srv://<<USERNAME>>:<<PASSWORD>>@insurance.qzgzhb2.mongodb.net/?retryWrites=true&w=majority&appName=insurance")
 db = client["insurance"]
 customers_col = db["customers"]
 claims_col = db["claims"]
@@ -35,3 +35,4 @@ while True:
     print(f"Inserted claim {claim['claim_id']} for customer {customer['customer_id']}")
 
     time.sleep(2)
+
